@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Revelascope — Visualization-integrated surgical retraction</title>
-<meta name="description" content="Revelascope is an investigational surgical retractor with integrated camera and illumination geometry, developed for nipple-sparing mastectomy.">
+<title>Revelascope</title>
+<meta name="description" content="Better surgery starts with better visualization. Revelascope is a surgical retractor with integrated camera and illumination, in development at Crescata Surgical.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,79 +24,39 @@
   </div>
 </header>
 
-<main class="wrap">
+<main class="frame">
+  <div class="inner">
+    <h1 style="font-size:clamp(28px, 4.6vw, 46px); max-width:16ch; margin-left:auto; margin-right:auto;">Better surgery starts with better visualization.</h1>
+    <p class="sub" style="font-size:clamp(14.5px, 1.6vw, 17px); max-width:46ch;">Revelascope is a surgical retractor with integrated camera and illumination, developed for nipple-sparing mastectomy. Leave your email to learn more or get in touch with the team.</p>
 
-  <section class="hero">
-    <span class="eyebrow">Crescata Surgical</span>
-    <h1>A retractor built around what the surgeon can't see.</h1>
-    <p class="sub">Revelascope integrates a camera and LED illumination directly into a surgical retractor blade, giving the operating surgeon a visual field that traditional retraction can't provide — developed first for nipple-sparing mastectomy.</p>
+    <form id="signup-form" class="contact-form" name="revelascope-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="revelascope-interest">
+      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+      <button type="submit" class="btn">Get in touch</button>
+    </form>
+    <p class="confirm" id="confirm-msg">Thanks — we'll be in touch.</p>
 
-    <div style="margin-top:44px;">
-      <svg viewBox="0 0 640 260" role="img" aria-labelledby="diagramTitle" style="width:100%;max-width:640px;height:auto;">
-        <title id="diagramTitle">Schematic of blade-referenced camera geometry</title>
-        <!-- blade reference horizon -->
-        <line x1="40" y1="190" x2="430" y2="190" stroke="#0B4F4F" stroke-width="2"/>
-        <!-- blade body -->
-        <path d="M40,190 L40,178 L400,178 L430,190 L400,202 L40,202 Z" fill="none" stroke="#10181B" stroke-width="1.4"/>
-        <!-- camera housing at tip -->
-        <rect x="420" y="172" width="26" height="36" fill="#0B4F4F"/>
-        <!-- optical axis, diverging from blade at a defined angle -->
-        <line x1="433" y1="185" x2="560" y2="70" stroke="#157A6E" stroke-width="1.6" stroke-dasharray="5 4"/>
-        <!-- focal point marker -->
-        <circle cx="560" cy="70" r="4" fill="none" stroke="#B5651D" stroke-width="1.6"/>
-        <line x1="550" y1="70" x2="570" y2="70" stroke="#B5651D" stroke-width="1"/>
-        <line x1="560" y1="60" x2="560" y2="80" stroke="#B5651D" stroke-width="1"/>
-
-        <!-- labels -->
-        <text x="40" y="230" class="mono" font-size="11" fill="#7C8A90" font-family="IBM Plex Mono, monospace" letter-spacing="0.06em">BLADE REFERENCE HORIZON</text>
-        <line x1="40" y1="215" x2="40" y2="222" stroke="#D9DFDE"/>
-
-        <text x="452" y="196" class="mono" font-size="11" fill="#7C8A90" font-family="IBM Plex Mono, monospace" letter-spacing="0.06em">CAMERA</text>
-
-        <text x="470" y="55" class="mono" font-size="11" fill="#7C8A90" font-family="IBM Plex Mono, monospace" letter-spacing="0.06em">OPTICAL AXIS</text>
-
-        <text x="576" y="74" class="mono" font-size="11" fill="#7C8A90" font-family="IBM Plex Mono, monospace" letter-spacing="0.06em">FOCAL POINT</text>
-      </svg>
-    </div>
-  </section>
-
-  <section>
-    <span class="eyebrow">The problem</span>
-    <div class="spine">
-      <p>In nipple-sparing mastectomy, visualization difficulty during flap dissection is close to universal among the surgeons we've interviewed — it's the pain point that comes up first and most consistently, ahead of ergonomics or training gaps.</p>
-      <p>Poor visibility drives aggressive retraction, and aggressive retraction drives flap and nipple trauma. Published rates of nipple necrosis following NSM range from roughly 5–30% (Matsen et al., <em>Annals of Surgical Oncology</em>, 2016) — a wide enough range to suggest technique and visualization, not just patient selection, play a real role. Patients with larger or more ptotic breasts are frequently excluded from NSM altogether because that ischemic risk is compounded by exactly this visibility problem.</p>
-    </div>
-  </section>
-
-  <section>
-    <span class="eyebrow">The approach</span>
-    <div class="grid-2">
-      <div class="card">
-        <h3>Integrated imaging</h3>
-        <p style="color:var(--ink-soft); margin-top:10px;">A camera and LED illumination are built into the retractor blade itself, referenced to a fixed geometry rather than held or aimed separately — giving a consistent view of the dissection plane without a second instrument or a second set of hands.</p>
-      </div>
-      <div class="card">
-        <h3>Single-use by design</h3>
-        <p style="color:var(--ink-soft); margin-top:10px;">Revelascope is a fully disposable device — no reprocessing, no sterilization cycle to manage, and a design that can move at the pace of the OR it's built for.</p>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <span class="eyebrow">Status</span>
-    <div class="status-line">
-      <span class="dot"></span>
-      <span>Investigational device — in development. Provisional patent filed. Not for sale.</span>
-    </div>
-  </section>
-
+    <p class="disclaimer">Revelascope is an investigational device under development by Crescata Surgical. Not evaluated or cleared by the FDA. Not available for clinical or commercial use.</p>
+  </div>
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <p class="disclaimer">Revelascope is an investigational device under active development by Crescata Surgical. It has not been evaluated or cleared by the FDA and is not available for clinical or commercial use. Content on this site describes device development and research in progress, not a marketed product or approved clinical claim.</p>
-  </div>
-</footer>
+<script>
+  const form = document.getElementById('signup-form');
+  const confirmMsg = document.getElementById('confirm-msg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    }).then(() => {
+      form.style.display = 'none';
+      confirmMsg.style.display = 'block';
+    }).catch(() => { form.submit(); });
+  });
+</script>
 
 </body>
 </html>

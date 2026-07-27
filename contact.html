@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Revelascope</title>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,30 +21,40 @@
   </div>
 </header>
 
-<main class="wrap">
-
-  <section class="hero" style="padding-bottom:0;">
+<main class="frame">
+  <div class="inner">
     <span class="eyebrow">Contact</span>
-    <h1 style="font-size:34px;">Get in touch.</h1>
+    <h1>Get in touch.</h1>
     <p class="sub">For partnership, investment, clinical collaboration, or press inquiries.</p>
-  </section>
 
-  <section>
-    <div class="spine">
-      <p style="font-family:'IBM Plex Mono', monospace; font-size:15px;">
-        <a href="mailto:contact@crescatasurgical.com">contact@crescatasurgical.com</a>
-      </p>
-      <p style="color:var(--ink-soft); margin-top:24px;">Replace the address above with the inbox you want inquiries routed to before this goes live.</p>
-    </div>
-  </section>
+    <form id="signup-form" class="contact-form" name="revelascope-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="revelascope-interest">
+      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+      <button type="submit" class="btn">Get in touch</button>
+    </form>
+    <p class="confirm" id="confirm-msg">Thanks — we'll be in touch.</p>
 
+    <p class="email-line"><a href="mailto:contact@revelascope.com">contact@revelascope.com</a></p>
+  </div>
 </main>
 
-<footer class="site">
-  <div class="wrap">
-    <p class="disclaimer">Revelascope is an investigational device under active development by Crescata Surgical. It has not been evaluated or cleared by the FDA and is not available for clinical or commercial use.</p>
-  </div>
-</footer>
+<script>
+  const form = document.getElementById('signup-form');
+  const confirmMsg = document.getElementById('confirm-msg');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const data = new FormData(form);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    }).then(() => {
+      form.style.display = 'none';
+      confirmMsg.style.display = 'block';
+    }).catch(() => { form.submit(); });
+  });
+</script>
 
 </body>
 </html>

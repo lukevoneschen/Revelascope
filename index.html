@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Revelascope</title>
-<meta name="description" content="Better surgery starts with better visualization. Revelascope is a surgical retractor with integrated camera and illumination, in development at Crescata Surgical.">
+<meta name="description" content="Better surgery starts with better visualization. Revelascope is a surgical retractor with integrated camera and illumination developed for nipple-sparing mastectomy.">
+<link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -12,13 +13,28 @@
 </head>
 <body>
 
+<div class="aperture-bg" aria-hidden="true">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#293748" stroke-width="2">
+      <circle cx="100" cy="100" r="88"/>
+      <circle cx="100" cy="100" r="78"/>
+      <g>
+        <path d="M100 22 A78 78 0 0 1 167 61 L100 100 Z"/>
+        <path d="M167 61 A78 78 0 0 1 167 139 L100 100 Z"/>
+        <path d="M167 139 A78 78 0 0 1 100 178 L100 100 Z"/>
+        <path d="M100 178 A78 78 0 0 1 33 139 L100 100 Z"/>
+        <path d="M33 139 A78 78 0 0 1 33 61 L100 100 Z"/>
+        <path d="M33 61 A78 78 0 0 1 100 22 L100 100 Z"/>
+      </g>
+    </g>
+  </svg>
+</div>
+
 <header class="site">
   <div class="navbar">
-    <a class="wordmark" href="index.html">Revela<span>scope</span></a>
+    <a class="logo-link" href="index.html"><img src="logo.png" alt="Revelascope"></a>
     <nav class="links">
       <a href="index.html" aria-current="page">Home</a>
-      <a href="technology.html">Technology</a>
-      <a href="team.html">Team</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
@@ -26,8 +42,9 @@
 
 <main class="frame">
   <div class="inner">
-    <h1 style="font-size:clamp(28px, 4.6vw, 46px); max-width:16ch; margin-left:auto; margin-right:auto;">Better surgery starts with better visualization.</h1>
-    <p class="sub" style="font-size:clamp(14.5px, 1.6vw, 17px); max-width:46ch;">Revelascope is a surgical retractor with integrated camera and illumination, developed for nipple-sparing mastectomy. Leave your email to learn more or get in touch with the team.</p>
+    <div class="rule"></div>
+    <h1>Better surgery starts with better visualization</h1>
+    <p class="sub">Revelascope is a surgical retractor with integrated camera and illumination developed for nipple-sparing mastectomy. Leave your email to learn more or get in touch with the team.</p>
 
     <form id="signup-form" class="contact-form" name="revelascope-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="revelascope-interest">

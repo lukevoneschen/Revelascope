@@ -4,18 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Revelascope</title>
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="aperture-bg" aria-hidden="true">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" stroke="#293748" stroke-width="2">
+      <circle cx="100" cy="100" r="88"/>
+      <circle cx="100" cy="100" r="78"/>
+      <g>
+        <path d="M100 22 A78 78 0 0 1 167 61 L100 100 Z"/>
+        <path d="M167 61 A78 78 0 0 1 167 139 L100 100 Z"/>
+        <path d="M167 139 A78 78 0 0 1 100 178 L100 100 Z"/>
+        <path d="M100 178 A78 78 0 0 1 33 139 L100 100 Z"/>
+        <path d="M33 139 A78 78 0 0 1 33 61 L100 100 Z"/>
+        <path d="M33 61 A78 78 0 0 1 100 22 L100 100 Z"/>
+      </g>
+    </g>
+  </svg>
+</div>
+
 <header class="site">
   <div class="navbar">
-    <a class="wordmark" href="index.html">Revela<span>scope</span></a>
+    <a class="logo-link" href="index.html"><img src="logo.png" alt="Revelascope"></a>
     <nav class="links">
       <a href="index.html">Home</a>
-      <a href="technology.html">Technology</a>
-      <a href="team.html">Team</a>
       <a href="contact.html" aria-current="page">Contact</a>
     </nav>
   </div>
@@ -24,7 +42,7 @@
 <main class="frame">
   <div class="inner">
     <span class="eyebrow">Contact</span>
-    <h1>Get in touch.</h1>
+    <h1>Get in touch</h1>
     <p class="sub">For partnership, investment, clinical collaboration, or press inquiries.</p>
 
     <form id="signup-form" class="contact-form" name="revelascope-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -34,8 +52,6 @@
       <button type="submit" class="btn">Get in touch</button>
     </form>
     <p class="confirm" id="confirm-msg">Thanks — we'll be in touch.</p>
-
-    <p class="email-line"><a href="mailto:contact@revelascope.com">contact@revelascope.com</a></p>
   </div>
 </main>
 

@@ -28,8 +28,34 @@ body{
 .topbar{
   height:3px;
   flex:0 0 auto;
+  position:relative;
+  z-index:3;
   background:linear-gradient(90deg, var(--accent) 0%, var(--accent) 32%, var(--line) 32%, var(--line) 100%);
 }
+
+/* Concentric aperture rings */
+.rings{
+  position:fixed;
+  top:-14vmin;
+  right:-10vmin;
+  width:78vmin;
+  height:78vmin;
+  pointer-events:none;
+  z-index:0;
+}
+.rings svg{width:100%; height:100%; display:block;}
+
+.rings-2{
+  position:fixed;
+  bottom:-24vmin;
+  left:-18vmin;
+  width:56vmin;
+  height:56vmin;
+  pointer-events:none;
+  z-index:0;
+  opacity:.55;
+}
+.rings-2 svg{width:100%; height:100%; display:block;}
 
 /* Nav */
 header.site{
@@ -40,6 +66,8 @@ header.site{
   align-items:center;
   justify-content:center;
   background:var(--bg);
+  position:relative;
+  z-index:3;
 }
 .navbar{
   width:100%;
@@ -82,6 +110,8 @@ main.frame{
   padding:24px;
   overflow:hidden;
   text-align:center;
+  position:relative;
+  z-index:1;
 }
 .inner{width:100%; max-width:920px;}
 .inner.narrow{max-width:660px;}
@@ -170,6 +200,7 @@ h1.wide{max-width:24ch;}
   border:1px solid var(--line);
   border-radius:8px;
   padding:15px 17px;
+  background:var(--bg);
 }
 .card h3{
   font-size:13.5px;
@@ -206,6 +237,7 @@ h1.wide{max-width:24ch;}
   border-left:3px solid var(--accent);
   border-radius:8px;
   padding:14px 17px;
+  background:var(--bg);
 }
 .person h3{font-size:14px; margin:0; color:var(--ink-deep);}
 .person .role{
@@ -364,6 +396,8 @@ button.btn:focus-visible{outline:2px solid var(--accent-deep); outline-offset:3p
 
 @media (max-width:860px){
   html,body{overflow:auto;}
+  .rings{top:-10vmin; right:-24vmin; width:86vmin; height:86vmin;}
+  .rings-2{display:none;}
   main.frame{overflow:visible; justify-content:flex-start; padding-top:28px;}
   .stats, .cards, .cards.two, .people{grid-template-columns:1fr;}
   .tl-item{grid-template-columns:1fr; gap:2px;}

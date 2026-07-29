@@ -18,18 +18,23 @@
     <a class="logo-link" href="index.html"><img src="logo.png" alt="Revelascope"></a>
     <nav class="links">
       <a href="index.html" aria-current="page">Home</a>
+      <a href="problem.html">The Problem</a>
+      <a href="vision.html">The Vision</a>
+      <a href="team.html">The Team</a>
+      <a href="plan.html">The Plan</a>
       <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
 <main class="frame">
-  <div class="inner">
+  <div class="inner narrow">
     <div class="rule"></div>
     <h1>Better surgery starts with better visualization</h1>
-    <p class="sub">Revelascope is a video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy. Leave your email to learn more or get in touch with the team.</p>
+    <p class="tagline">Modern surgery without replacing the surgeon.</p>
+    <p class="sub">Revelascope is a video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy.</p>
 
-    <form id="signup-form" class="contact-form" name="revelascope-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+    <form id="signup-form" class="inline" name="revelascope-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="revelascope-interest">
       <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
       <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
@@ -46,15 +51,12 @@
   const confirmMsg = document.getElementById('confirm-msg');
   form.addEventListener('submit', function(e){
     e.preventDefault();
-    const data = new FormData(form);
     fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(data).toString()
-    }).then(() => {
-      form.style.display = 'none';
-      confirmMsg.style.display = 'block';
-    }).catch(() => { form.submit(); });
+      method:'POST',
+      headers:{'Content-Type':'application/x-www-form-urlencoded'},
+      body:new URLSearchParams(new FormData(form)).toString()
+    }).then(()=>{ form.style.display='none'; confirmMsg.style.display='block'; })
+      .catch(()=>{ form.submit(); });
   });
 </script>
 

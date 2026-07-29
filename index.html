@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Revelascope</title>
 <meta name="description" content="Better surgery starts with better visualization. Revelascope is a video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy.">
+<meta name="color-scheme" content="light">
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<div class="topbar"></div>
 
 <header class="site">
   <div class="navbar">
@@ -33,32 +36,9 @@
     <h1>Better surgery starts with better visualization</h1>
     <p class="tagline">Modern surgery without replacing the surgeon.</p>
     <p class="sub">Revelascope is a video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy.</p>
-
-    <form id="signup-form" class="inline" name="revelascope-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="revelascope-interest">
-      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
-      <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
-      <button type="submit" class="btn">Get in touch</button>
-    </form>
-    <p class="confirm" id="confirm-msg">Thanks — we'll be in touch.</p>
-
     <p class="disclaimer">Revelascope is an investigational device under development by Crescata Surgical. Not evaluated or cleared by the FDA. Not available for clinical or commercial use.</p>
   </div>
 </main>
-
-<script>
-  const form = document.getElementById('signup-form');
-  const confirmMsg = document.getElementById('confirm-msg');
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    fetch('/', {
-      method:'POST',
-      headers:{'Content-Type':'application/x-www-form-urlencoded'},
-      body:new URLSearchParams(new FormData(form)).toString()
-    }).then(()=>{ form.style.display='none'; confirmMsg.style.display='block'; })
-      .catch(()=>{ form.submit(); });
-  });
-</script>
 
 </body>
 </html>

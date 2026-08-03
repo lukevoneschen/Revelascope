@@ -14,15 +14,10 @@
   --nav-h:74px;
 }
 *{box-sizing:border-box;}
-html{background:#FFFFFF;}
+html{background:#EAF3F8;}
 html,body{height:100%; margin:0; overflow:hidden;}
 body{
-  background-color:var(--bg);
-  background-image:
-    radial-gradient(115% 85% at 88% 0%, #E4F1F3 0%, #F1F8F9 34%, rgba(255,255,255,0) 68%),
-    radial-gradient(80% 60% at 4% 100%, #F0F7F8 0%, rgba(255,255,255,0) 58%);
-  background-repeat:no-repeat;
-  background-attachment:fixed;
+  background:#EAF3F8 url('Revela_Background.jpg') center center / cover no-repeat fixed;
   color:var(--ink);
   font-family:'Manrope', -apple-system, 'Helvetica Neue', Arial, sans-serif;
   display:flex;
@@ -84,21 +79,6 @@ nav.links a[aria-current="page"]{
 }
 nav.links a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
 
-/* Contact CTA button in nav */
-nav.links a.nav-cta{
-  font-weight:600;
-  color:var(--ink-deep);
-  border:1px solid var(--line);
-  border-radius:8px;
-  padding:8px 18px;
-  transition:color .15s ease, border-color .15s ease, background .15s ease;
-}
-nav.links a.nav-cta:hover{
-  color:var(--accent-deep);
-  border-color:var(--accent);
-  background:var(--accent-tint);
-}
-
 /* Frame */
 main.frame{
   flex:1 1 auto;
@@ -129,56 +109,12 @@ h1{
 }
 h1.wide{max-width:24ch;}
 
-/* Home layout — left hero up top, description anchored bottom-center */
-main.frame.home{
-  justify-content:stretch;
-  align-items:center;
-  text-align:left;
-  padding:0;
+/* Home hero (centered, upright) */
+.hero{
+  font-size:clamp(30px, 5vw, 56px);
+  line-height:1.1;
+  max-width:20ch;
 }
-.home-inner{
-  width:100%;
-  max-width:1060px;
-  padding:9vh 26px 6vh;
-  flex:1 1 auto;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  gap:32px;
-}
-.home-hero{max-width:none;}
-.home-hero h1{
-  font-family:var(--display);
-  font-style:italic;
-  font-weight:500;
-  font-size:clamp(33px, 6.1vw, 74px);
-  line-height:1.04;
-  letter-spacing:-0.005em;
-  color:var(--ink-deep);
-  max-width:19ch;
-  margin:0;
-  text-align:left;
-}
-.home-hero .tagline{
-  font-family:'Manrope', sans-serif;
-  font-style:normal;
-  font-weight:500;
-  color:var(--ink);
-  font-size:clamp(15px, 1.7vw, 19px);
-  letter-spacing:0;
-  margin:22px 0 0;
-  max-width:52ch;
-  text-align:left;
-}
-.home-foot{width:100%; text-align:center;}
-.foot-rule{
-  width:min(62ch, 80%);
-  height:1px;
-  background:rgba(14,124,140,.24);
-  margin:0 auto 22px;
-}
-.home-foot .sub{margin:0 auto; max-width:64ch;}
-.home-foot .disclaimer{margin:16px auto 0; max-width:62ch;}
 
 .tagline{
   margin:14px auto 0;
@@ -477,7 +413,7 @@ button.btn:focus-visible{outline:2px solid var(--accent-deep); outline-offset:3p
   gap:13px;
   margin-top:22px;
 }
-.flip{height:180px; perspective:1300px; cursor:pointer; border-radius:12px;}
+.flip{height:196px; perspective:1300px; cursor:pointer; border-radius:12px;}
 .flip:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
 .flip-inner{
   position:relative;
@@ -585,6 +521,22 @@ button.btn:focus-visible{outline:2px solid var(--accent-deep); outline-offset:3p
   max-width:none;
 }
 
+/* Highlighted key line (Plan) */
+.plan-highlight{
+  margin:18px auto 0;
+  max-width:62ch;
+  background:var(--accent-tint);
+  border:1px solid var(--line);
+  border-left:4px solid var(--accent);
+  border-radius:8px;
+  padding:14px 20px;
+  font-size:clamp(13.5px, 1.5vw, 15.5px);
+  font-weight:600;
+  line-height:1.5;
+  color:var(--ink-deep);
+  text-align:center;
+}
+
 @media (prefers-reduced-motion: reduce){
   .flip-inner{transition:none;}
 }
@@ -592,15 +544,8 @@ button.btn:focus-visible{outline:2px solid var(--accent-deep); outline-offset:3p
 @media (max-width:860px){
   html,body{overflow:auto;}
   main.frame{overflow:visible; justify-content:flex-start; padding-top:28px;}
-  main.frame.home{padding:0;}
-  .home-inner{
-    padding:8vh 22px 6vh;
-    justify-content:flex-start;
-    gap:14vh;
-  }
-  .home-hero h1{max-width:16ch;}
   .stats, .cards, .cards.two, .people, .flip-cards{grid-template-columns:1fr;}
-  .flip{height:150px;}
+  .flip{height:164px;}
   .tl-item{grid-template-columns:1fr; gap:2px;}
   /* Stack the horizontal timeline on small screens */
   .htimeline{grid-template-columns:1fr; column-gap:0;}
@@ -609,21 +554,15 @@ button.btn:focus-visible{outline:2px solid var(--accent-deep); outline-offset:3p
   .htl-item{padding:12px 0; border-top:1px solid var(--line);}
   .htl-item:last-child{border-bottom:1px solid var(--line);}
   nav.links{gap:14px;}
-  nav.links a.nav-cta{padding:7px 15px;}
   .logo-link img{height:24px;}
 }
 
 
 /* Never invert in dark-mode browsers — this is a light-only site */
 @media (prefers-color-scheme: dark){
-  html{background:#FFFFFF;}
+  html{background:#EAF3F8;}
   body{
-    background:#FFFFFF;
-    background-image:
-      radial-gradient(115% 85% at 88% 0%, #E4F1F3 0%, #F1F8F9 34%, rgba(255,255,255,0) 68%),
-      radial-gradient(80% 60% at 4% 100%, #F0F7F8 0%, rgba(255,255,255,0) 58%);
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+    background:#EAF3F8 url('Revela_Background.jpg') center center / cover no-repeat fixed;
     color:var(--ink);
   }
   .stat{background:var(--panel);}

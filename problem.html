@@ -9,7 +9,7 @@
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,13 +19,12 @@
 <header class="site">
   <div class="navbar">
     <a class="logo-link" href="index.html"><img src="logo.png" alt="Revelascope"></a>
-    <nav class="links">
-      <a href="index.html">Home</a>
+        <nav class="links">
       <a href="problem.html" aria-current="page">The Problem</a>
-      <a href="vision.html">The Vision</a>
       <a href="team.html">The Team</a>
       <a href="plan.html">The Plan</a>
       <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -34,42 +33,69 @@
   <div class="inner">
     <div class="rule"></div>
     <h1 class="wide">The problem is visualization</h1>
-    <p class="sub">Nipple-sparing mastectomy is the gold standard of mastectomy, preserving the skin envelope and nipple-areola complex for superior aesthetic and psychological outcomes. It requires excising the broad, shallow breast gland through an incision of roughly 10&ndash;12&nbsp;cm, navigated largely by direct line of sight. No current tool solves visualization, ergonomics, and tissue-handling challenges while preserving the open NSM technique, incision, dissection plane, and haptics surgeons already trust.</p>
+    <p class="sub">Nipple-sparing mastectomy is performed through a small incision, navigated largely by direct line of sight. When the surgeon can&#39;t see the plane, three problems follow.</p>
 
-    <div class="stats">
-      <div class="stat">
-        <span class="num">Limited</span>
-        <span class="label">Patient candidacy, constrained by breast size, oncologic disposition, and ptosis</span>
+    <figure class="quote">
+      <blockquote>A surgeon is only as good as their retraction and their exposure.</blockquote>
+      <cite>University of Chicago Surgeon</cite>
+    </figure>
+
+    <div class="flip-cards">
+      <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Retraction trauma — flip for detail">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <span class="flip-title">Retraction trauma</span>
+            <span class="flip-teaser">5&ndash;14% skin-flap necrosis</span>
+            <span class="flip-cue">Tap to flip &#8635;</span>
+          </div>
+          <div class="flip-face flip-back">
+            <p>An assistant who can&#39;t see the plane holds sustained tension on the flap &mdash; a recognized driver of necrosis and reoperation.</p>
+          </div>
+        </div>
       </div>
-      <div class="stat">
-        <span class="num">5&ndash;14%</span>
-        <span class="label">Skin flap necrosis following mastectomy with reconstruction, more severe in NSM</span>
+
+      <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Surgeon injury — flip for detail">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <span class="flip-title">Surgeon injury</span>
+            <span class="flip-teaser">&gt;50% report career-affecting pain</span>
+            <span class="flip-cue">Tap to flip &#8635;</span>
+          </div>
+          <div class="flip-face flip-back">
+            <p>Seeing the plane forces non-anatomic posture &mdash; neck extension, back flexion, elevated shoulders. The cumulative toll drives chronic injury and early attrition.</p>
+          </div>
+        </div>
       </div>
-      <div class="stat">
-        <span class="num">&gt;50%</span>
-        <span class="label">Surgeons reporting career-affecting musculoskeletal pain</span>
+
+      <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Longer operations — flip for detail">
+        <div class="flip-inner">
+          <div class="flip-face flip-front">
+            <span class="flip-title">Longer operations</span>
+            <span class="flip-teaser">Constant repositioning to see</span>
+            <span class="flip-cue">Tap to flip &#8635;</span>
+          </div>
+          <div class="flip-face flip-back">
+            <p>Holding a usable view means constantly repositioning the table, surgeon, and retractor &mdash; a meaningful time cost surgeons feel every case.</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <p class="lead-in">Visualization difficulty leads to:</p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Ergonomic surgeon pain</h3>
-        <p>Seeing the working plane demands non-anatomic posture &mdash; neck extension, back flexion, sustained shoulder elevation. The cumulative toll drives chronic injury and early attrition.</p>
-      </div>
-      <div class="card">
-        <h3>Longer surgery</h3>
-        <p>Holding a usable view requires constant repositioning of the table, the surgeon, and the retractor. Surgeons describe this as a meaningful time cost.</p>
-      </div>
-      <div class="card">
-        <h3>Retraction trauma</h3>
-        <p>An assistant who cannot see the plane holds high, sustained tension on the flap. That loading is a recognized contributor to necrosis and reoperation.</p>
-      </div>
-    </div>
-
-    <p class="footnote">Sources: Matsen et&nbsp;al., <em>Ann Surg Oncol</em> 2016 (necrosis rates); Epstein et&nbsp;al., <em>JAMA Surg</em> 2018 and Davis et&nbsp;al., <em>J Surg Res</em> 2014 (musculoskeletal injury); Hallbeck et&nbsp;al., <em>Ann Surg Oncol</em> 2020 (NSM workload). Operative-time observations reflect Revelascope customer discovery interviews with practicing breast surgeons.</p>
+    <p class="footnote">Sources: Matsen et&nbsp;al., <em>Ann Surg Oncol</em> 2016; Epstein et&nbsp;al., <em>JAMA Surg</em> 2018; Davis et&nbsp;al., <em>J Surg Res</em> 2014; Hallbeck et&nbsp;al., <em>Ann Surg Oncol</em> 2020. Operative-time observations from Revelascope customer discovery interviews.</p>
   </div>
+
+  <script>
+    document.querySelectorAll('.flip').forEach(function(el){
+      function toggle(){
+        el.classList.toggle('flipped');
+        el.setAttribute('aria-pressed', el.classList.contains('flipped') ? 'true' : 'false');
+      }
+      el.addEventListener('click', toggle);
+      el.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
+      });
+    });
+  </script>
 </main>
 
 </body>

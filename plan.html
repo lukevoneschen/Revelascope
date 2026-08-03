@@ -9,7 +9,7 @@
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,13 +19,12 @@
 <header class="site">
   <div class="navbar">
     <a class="logo-link" href="index.html"><img src="logo.png" alt="Revelascope"></a>
-    <nav class="links">
-      <a href="index.html">Home</a>
+        <nav class="links">
       <a href="problem.html">The Problem</a>
-      <a href="vision.html">The Vision</a>
       <a href="team.html">The Team</a>
       <a href="plan.html" aria-current="page">The Plan</a>
       <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -36,24 +35,29 @@
     <h1 class="wide">The Revelascope path from prototype to the OR</h1>
     <p class="sub">Each prototype development is validated with practicing breast surgeons before the next stage begins.</p>
 
-    <div class="timeline">
-      <div class="tl-item">
-        <span class="tl-date">Nov 2025</span>
-        <div class="tl-body">
+    <div class="htimeline">
+      <div class="htl-item done">
+        <span class="htl-date">Nov 2025</span>
+        <div class="htl-node"><span class="dot"></span></div>
+        <div class="htl-body">
           <strong>Alpha prototype</strong>
-          <span>First working device, validated in a cadaveric nipple-sparing mastectomy in which a fellowship-trained breast surgical oncologist completed bilateral NSM using Revelascope as the sole retractor.</span>
+          <span>Bilateral cadaveric NSM completed with Revelascope as the sole retractor.</span>
         </div>
       </div>
-      <div class="tl-item now">
-        <span class="tl-date">Aug 2026</span>
-        <div class="tl-body">
+      <div class="htl-item now">
+        <span class="htl-date">Aug 2026</span>
+        <div class="htl-node"><span class="dot"></span></div>
+        <div class="htl-body">
           <strong>Alpha-plus prototype</strong>
+          <span class="badge">In progress</span>
         </div>
       </div>
-      <div class="tl-item">
-        <span class="tl-date">Jan 2027</span>
-        <div class="tl-body">
+      <div class="htl-item">
+        <span class="htl-date">Jan 2027</span>
+        <div class="htl-node"><span class="dot"></span></div>
+        <div class="htl-body">
           <strong>Beta prototype</strong>
+          <span>Validated with practicing breast surgeons before the OR.</span>
         </div>
       </div>
     </div>

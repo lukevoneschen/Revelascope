@@ -88,18 +88,20 @@ nav.links a[aria-current="page"]{
 nav.links a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
 
 /* Frame */
-/* Scroll panels (each section ~one screen) */
+/* Scroll panels — sized to content, comfortable spacing between */
 .panel{
-  min-height:calc(100vh - var(--nav-h) - 3px);
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  padding:56px 24px;
+  padding:60px 24px;
   text-align:center;
   position:relative;
   z-index:1;
   scroll-margin-top:calc(var(--nav-h) + 3px);
+}
+#home.panel{
+  min-height:calc(100vh - var(--nav-h) - 3px);
 }
 .inner{width:100%; max-width:920px;}
 .inner.narrow{max-width:660px;}

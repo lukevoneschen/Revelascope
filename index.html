@@ -14,29 +14,198 @@
 </head>
 <body>
 
-<div class="topbar"></div>
+<div class="bg-layer" aria-hidden="true"></div>
 
-<header class="site">
-  <div class="navbar">
-    <a class="logo-link" href="index.html"><img src="logo.png" alt="Revelascope"></a>
-            <nav class="links">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="problem.html">The Problem</a>
-      <a href="team.html">The Team</a>
-      <a href="plan.html">The Plan</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+<div class="sticky-top">
+  <div class="topbar"></div>
+  <header class="site">
+    <div class="navbar">
+      <a class="logo-link" href="#home"><img src="logo.png" alt="Revelascope"></a>
+      <nav class="links">
+        <a href="#home" aria-current="page">Home</a>
+        <a href="#plan">The Plan</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+</div>
 
-<main class="frame">
-  <div class="inner narrow">
-    <h1 class="hero">Better surgery starts with better visualization.</h1>
-    <p class="tagline">Modern surgery without replacing the surgeon.</p>
-    <p class="sub">Revelascope is a video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy.</p>
-    <p class="disclaimer">Revelascope is an investigational device under development by Crescata Surgical. Not evaluated or cleared by the FDA. Not available for clinical or commercial use.</p>
-  </div>
+<main>
+
+  <section class="panel" id="home">
+    <div class="inner narrow">
+      <h1 class="hero">Better surgery starts with better visualization.</h1>
+      <p class="tagline">Modern surgery without replacing the surgeon.</p>
+      <p class="sub">A video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy.</p>
+      <p class="disclaimer">Revelascope is an investigational device under development by Crescata Surgical. Not yet evaluated or cleared by the FDA. Not available for clinical or commercial use.</p>
+    </div>
+  </section>
+
+  <section class="panel" id="problem">
+    <div class="inner">
+      <p class="lead-in">The Problem</p>
+
+      <figure class="quote">
+        <blockquote>A surgeon is only as good as their retraction and their exposure.</blockquote>
+        <cite>University of Chicago Surgeon</cite>
+      </figure>
+
+      <div class="flip-cards">
+        <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Patient retraction trauma — flip for detail">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <span class="flip-title">Patient retraction trauma</span>
+              <span class="flip-teaser">5&ndash;14% skin-flap necrosis</span>
+              <span class="flip-cue">Tap to flip &#8635;</span>
+            </div>
+            <div class="flip-face flip-back">
+              <p>In order for the surgeon to achieve direct line-of-sight visualization, an assistant holds sustained tension on the skin flap. This forceful retraction is a recognized driver of skin flap and NAC necrosis, leading to post-operative complications.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Surgeon injury — flip for detail">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <span class="flip-title">Surgeon Injury</span>
+              <span class="flip-teaser">&gt;50% report career-affecting pain</span>
+              <span class="flip-cue">Tap to flip &#8635;</span>
+            </div>
+            <div class="flip-face flip-back">
+              <p>Dissecting with direct line-of-sight visualization forces non-anatomic and painful operating posture. Over the course of a surgical career, the cumulative physical strain causes chronic injury and early attrition.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Inefficient OR — flip for detail">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <span class="flip-title">Inefficient OR</span>
+              <span class="flip-teaser">Repositioning drives up operative time</span>
+              <span class="flip-cue">Tap to flip &#8635;</span>
+            </div>
+            <div class="flip-face flip-back">
+              <p>A usable view demands constant repositioning of the table, surgeon, and retractor. The added operative time is a resource burden on the entire OR team, and a cost the hospital absorbs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="footnote">Sources: Matsen et&nbsp;al., <em>Ann Surg Oncol</em> 2016; Epstein et&nbsp;al., <em>JAMA Surg</em> 2018; Davis et&nbsp;al., <em>J Surg Res</em> 2014; Hallbeck et&nbsp;al., <em>Ann Surg Oncol</em> 2020. Operative-time observations from Revelascope customer discovery interviews.</p>
+    </div>
+  </section>
+
+
+  <section class="panel" id="plan">
+    <div class="inner">
+      <h1 class="wide">From Prototype to the OR</h1>
+      <p class="plan-highlight">Each prototype development is validated with practicing breast surgeons before the next stage begins.</p>
+
+      <div class="htimeline">
+        <div class="htl-item done">
+          <span class="htl-date">Nov 2025</span>
+          <div class="htl-node"><span class="dot"></span></div>
+          <div class="htl-body">
+            <strong>Alpha prototype</strong>
+            <span>Bilateral cadaveric NSM completed with Revelascope as the sole retractor.</span>
+          </div>
+        </div>
+        <div class="htl-item now">
+          <span class="htl-date">Aug 2026</span>
+          <div class="htl-node"><span class="dot"></span></div>
+          <div class="htl-body">
+            <strong>Alpha-plus prototype</strong>
+            <span class="badge">In progress</span>
+          </div>
+        </div>
+        <div class="htl-item">
+          <span class="htl-date">Jan 2027</span>
+          <div class="htl-node"><span class="dot"></span></div>
+          <div class="htl-body">
+            <strong>Beta prototype</strong>
+            <span>Validated with practicing breast surgeons before the OR.</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="callout">Interested in where Revelascope goes next? <a href="#contact">Reach out</a> to learn more about upcoming development milestones, or subscribe to our quarterly newsletter.</p>
+    </div>
+  </section>
+
+  <section class="panel" id="contact">
+    <div class="inner narrow">
+      <h1>Get in touch</h1>
+      <p class="sub">For Revelascope product inquiries, partnership, investment, donation, clinical collaboration, press inquiries, and&#47;or careers. Please leave a message and we will get back to you.</p>
+
+      <form id="interest-form" class="stack" name="revelascope-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="revelascope-interest">
+        <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+        <textarea name="message" placeholder="Tell us a bit about your interest" aria-label="Message"></textarea>
+        <button type="submit" class="btn">Send message</button>
+      </form>
+      <p class="confirm" id="interest-confirm">Thanks &mdash; we&#39;ll be in touch.</p>
+
+      <div class="divider">
+        <span class="section-label">Newsletter</span>
+        <p class="sub" style="margin-top:0;">Follow Revelascope&#39;s development. Quarterly updates on prototype milestones, clinical validation, and company news.</p>
+
+        <form id="news-form" class="inline" name="revelascope-newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="revelascope-newsletter">
+          <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+          <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address for newsletter">
+          <button type="submit" class="btn">Subscribe</button>
+        </form>
+        <p class="confirm" id="news-confirm">You&#39;re subscribed &mdash; thanks.</p>
+      </div>
+    </div>
+  </section>
+
 </main>
+
+<script>
+  // Flip cards
+  document.querySelectorAll('.flip').forEach(function(el){
+    function toggle(){
+      el.classList.toggle('flipped');
+      el.setAttribute('aria-pressed', el.classList.contains('flipped') ? 'true' : 'false');
+    }
+    el.addEventListener('click', toggle);
+    el.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
+    });
+  });
+
+  // Netlify form confirmation UX
+  function wire(formId, confirmId){
+    var f = document.getElementById(formId), c = document.getElementById(confirmId);
+    if(!f) return;
+    f.addEventListener('submit', function(e){
+      e.preventDefault();
+      fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:new URLSearchParams(new FormData(f)).toString()})
+        .then(function(){ f.style.display='none'; c.style.display='block'; })
+        .catch(function(){ f.submit(); });
+    });
+  }
+  wire('interest-form','interest-confirm');
+  wire('news-form','news-confirm');
+
+  // Scroll-spy: highlight the tab for the section currently in view
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.links a'));
+  var map = {};
+  navLinks.forEach(function(a){ var id = a.getAttribute('href').slice(1); if(id) map[id] = a; });
+  map['problem'] = map['home']; // folded problem keeps Home active
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){
+        navLinks.forEach(function(a){ a.removeAttribute('aria-current'); });
+        var a = map[en.target.id];
+        if(a) a.setAttribute('aria-current','page');
+      }
+    });
+  }, {rootMargin:'-45% 0px -50% 0px', threshold:0});
+  document.querySelectorAll('section.panel').forEach(function(s){ obs.observe(s); });
+</script>
 
 </body>
 </html>

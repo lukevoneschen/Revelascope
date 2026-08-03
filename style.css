@@ -14,17 +14,21 @@
   --nav-h:74px;
 }
 *{box-sizing:border-box;}
-html{background:#EAF3F8;}
-html,body{height:100%; margin:0; overflow:hidden;}
+html{background:#EAF3F8; scroll-behavior:smooth;}
+html,body{margin:0;}
 body{
-  background:#EAF3F8 url('Revela_Background.jpg') center center / cover no-repeat fixed;
+  background:transparent;
   color:var(--ink);
   font-family:'Manrope', -apple-system, 'Helvetica Neue', Arial, sans-serif;
-  display:flex;
-  flex-direction:column;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   text-rendering:optimizeLegibility;
+}
+.bg-layer{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background:#EAF3F8 url('Revela_Background.jpg') center center / cover no-repeat;
 }
 
 /* Clinical hairline */
@@ -36,15 +40,19 @@ body{
   background:linear-gradient(90deg, var(--accent) 0%, var(--accent) 32%, var(--line) 32%, var(--line) 100%);
 }
 
+/* Sticky header */
+.sticky-top{position:sticky; top:0; z-index:20;}
+
 /* Nav */
 header.site{
   height:var(--nav-h);
-  flex:0 0 auto;
   border-bottom:1px solid var(--line);
   display:flex;
   align-items:center;
   justify-content:center;
-  background:transparent;
+  background:rgba(247,251,252,.86);
+  -webkit-backdrop-filter:blur(10px);
+  backdrop-filter:blur(10px);
   position:relative;
   z-index:3;
 }
@@ -80,17 +88,18 @@ nav.links a[aria-current="page"]{
 nav.links a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;}
 
 /* Frame */
-main.frame{
-  flex:1 1 auto;
+/* Scroll panels (each section ~one screen) */
+.panel{
+  min-height:calc(100vh - var(--nav-h) - 3px);
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  padding:24px;
-  overflow:hidden;
+  padding:56px 24px;
   text-align:center;
   position:relative;
   z-index:1;
+  scroll-margin-top:calc(var(--nav-h) + 3px);
 }
 .inner{width:100%; max-width:920px;}
 .inner.narrow{max-width:660px;}
@@ -542,8 +551,8 @@ button.btn:focus-visible{outline:2px solid var(--accent-deep); outline-offset:3p
 }
 
 @media (max-width:860px){
-  html,body{overflow:auto;}
-  main.frame{overflow:visible; justify-content:flex-start; padding-top:28px;}
+  .panel{min-height:auto; justify-content:flex-start; padding:40px 22px;}
+  #home.panel{min-height:calc(100vh - var(--nav-h) - 3px); justify-content:center;}
   .stats, .cards, .cards.two, .people, .flip-cards{grid-template-columns:1fr;}
   .flip{height:164px;}
   .tl-item{grid-template-columns:1fr; gap:2px;}
@@ -553,7 +562,7 @@ button.btn:focus-visible{outline:2px solid var(--accent-deep); outline-offset:3p
   .htl-node{height:auto; margin:8px 0;}
   .htl-item{padding:12px 0; border-top:1px solid var(--line);}
   .htl-item:last-child{border-bottom:1px solid var(--line);}
-  nav.links{gap:14px;}
+  nav.links{gap:13px;}
   .logo-link img{height:24px;}
 }
 

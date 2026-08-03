@@ -31,19 +31,10 @@ body{
   background:#EAF3F8 url('Revela_Background.jpg') center center / cover no-repeat;
 }
 
-/* Clinical hairline */
-.topbar{
-  height:3px;
-  flex:0 0 auto;
-  position:relative;
-  z-index:3;
-  background:linear-gradient(90deg, var(--accent) 0%, var(--accent) 32%, var(--line) 32%, var(--line) 100%);
-}
-
+/* Nav */
 /* Sticky header */
 .sticky-top{position:sticky; top:0; z-index:20;}
 
-/* Nav */
 header.site{
   height:var(--nav-h);
   border-bottom:1px solid var(--line);
@@ -98,10 +89,10 @@ nav.links a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; b
   text-align:center;
   position:relative;
   z-index:1;
-  scroll-margin-top:calc(var(--nav-h) + 3px);
+  scroll-margin-top:var(--nav-h);
 }
 #home.panel{
-  min-height:calc(100vh - var(--nav-h) - 3px);
+  min-height:calc(100vh - var(--nav-h));
 }
 .inner{width:100%; max-width:920px;}
 .inner.narrow{max-width:660px;}
@@ -554,7 +545,7 @@ button.btn:focus-visible{outline:2px solid var(--accent-deep); outline-offset:3p
 
 @media (max-width:860px){
   .panel{min-height:auto; justify-content:flex-start; padding:40px 22px;}
-  #home.panel{min-height:calc(100vh - var(--nav-h) - 3px); justify-content:center;}
+  #home.panel{min-height:calc(100vh - var(--nav-h)); justify-content:center;}
   .stats, .cards, .cards.two, .people, .flip-cards{grid-template-columns:1fr;}
   .flip{height:164px;}
   .tl-item{grid-template-columns:1fr; gap:2px;}

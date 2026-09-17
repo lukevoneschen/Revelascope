@@ -101,7 +101,7 @@ h2{font-size:clamp(34px, 4.6vw, 58px); line-height:1.02;}
   font-weight:600;
   color:var(--accent-deep);
 }
-.hero .sub{margin:12px 0 34px; color:var(--slate); max-width:50ch;}
+.hero .sub{margin:26px 0 34px; color:var(--slate); max-width:50ch;}
 .hero .disclaimer{margin:40px 0 0;}
 .hero-image{background:url('or-hero.jpg') center / cover no-repeat;}
 

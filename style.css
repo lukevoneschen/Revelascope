@@ -9,8 +9,8 @@
   --accent:#0E7C8C;
   --accent-deep:#0A6070;
   --accent-tint:#E3F1F3;
-  --head:'Outfit', 'Helvetica Neue', Arial, sans-serif;
-  --body:'DM Sans', -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --head:'Cormorant Garamond', 'Garamond', Georgia, serif;
+  --body:'Jost', -apple-system, 'Helvetica Neue', Arial, sans-serif;
   --nav-h:72px;
   --gutter:clamp(22px, 5vw, 64px);
 }
@@ -21,8 +21,9 @@ body{
   background:#fff;
   color:var(--ink);
   font-family:var(--body);
-  font-size:16px;
-  line-height:1.6;
+  font-size:17px;
+  font-weight:300;
+  line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
 img{max-width:100%;}
@@ -44,11 +45,11 @@ header.site{
 .logo-link img{height:30px; width:auto; display:block;}
 nav.links{display:flex; gap:30px;}
 nav.links a{
-  font-size:15px; font-weight:500; color:var(--slate);
+  font-size:15px; font-weight:400; letter-spacing:.02em; color:var(--slate);
   text-decoration:none; white-space:nowrap; transition:color .15s ease;
 }
 nav.links a:hover{color:var(--accent);}
-nav.links a[aria-current="page"]{color:var(--ink-deep); font-weight:600;}
+nav.links a[aria-current="page"]{color:var(--ink-deep); font-weight:500;}
 a:focus-visible, .flip:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
 
 /* ---------- Shared ---------- */
@@ -56,12 +57,12 @@ a:focus-visible, .flip:focus-visible, button:focus-visible{outline:2px solid var
 .inner{max-width:1120px; margin:0 auto; padding:clamp(64px, 9vw, 110px) var(--gutter);}
 h1, h2{
   font-family:var(--head);
-  font-weight:800;
+  font-weight:500;
   color:var(--ink-deep);
-  letter-spacing:-.025em;
+  letter-spacing:-.01em;
   margin:0;
 }
-h2{font-size:clamp(34px, 4.6vw, 58px); line-height:1.02;}
+h2{font-size:clamp(40px, 5.4vw, 68px); line-height:1.05;}
 
 .btn, button.btn{
   display:inline-block;
@@ -70,7 +71,7 @@ h2{font-size:clamp(34px, 4.6vw, 58px); line-height:1.02;}
   color:#fff;
   border:0; border-radius:0;
   font-family:var(--body);
-  font-size:13px; font-weight:600; letter-spacing:.06em; text-transform:uppercase;
+  font-size:13px; font-weight:400; letter-spacing:.14em; text-transform:uppercase;
   text-decoration:none; cursor:pointer;
   transition:background .15s ease;
 }
@@ -91,18 +92,18 @@ h2{font-size:clamp(34px, 4.6vw, 58px); line-height:1.02;}
   padding:64px var(--gutter);
 }
 .hero h1{
-  font-size:clamp(40px, 5.4vw, 76px);
-  line-height:1.0;
-  max-width:13ch;
+  font-size:clamp(46px, 5.6vw, 80px);
+  line-height:1.04;
+  max-width:15ch;
 }
 .hero .tagline{
   margin:26px 0 0;
   font-size:clamp(16px, 1.5vw, 19px);
-  font-weight:600;
+  font-weight:500;
   color:var(--accent-deep);
 }
 .hero .sub{margin:26px 0 34px; color:var(--slate); max-width:50ch;}
-.hero .disclaimer{margin:40px 0 0;}
+.hero .disclaimer{margin:32px 0 0;}
 .hero-image{background:url('or-hero.jpg') center / cover no-repeat;}
 
 /* ---------- Problem ---------- */
@@ -111,10 +112,11 @@ h2{font-size:clamp(34px, 4.6vw, 58px); line-height:1.02;}
 .quote blockquote{
   margin:0;
   font-family:var(--head);
-  font-weight:600;
-  font-size:clamp(22px, 2.6vw, 32px);
-  line-height:1.25;
-  letter-spacing:-.01em;
+  font-style:italic;
+  font-weight:500;
+  font-size:clamp(28px, 3.2vw, 40px);
+  line-height:1.2;
+  letter-spacing:0;
   color:var(--ink);
   padding-left:22px;
   border-left:4px solid var(--accent);
@@ -134,11 +136,11 @@ h2{font-size:clamp(34px, 4.6vw, 58px); line-height:1.02;}
   display:flex; flex-direction:column;
 }
 .flip-front{background:var(--sky);}
-.flip-title{font-family:var(--head); font-size:22px; font-weight:700; line-height:1.15; color:var(--ink-deep); letter-spacing:-.01em;}
+.flip-title{font-family:var(--head); font-size:28px; font-weight:600; line-height:1.1; color:var(--ink-deep);}
 .flip-teaser{margin-top:10px; font-size:15px; color:var(--slate);}
-.flip-cue{margin-top:auto; font-size:13px; font-weight:600; color:var(--accent-deep);}
+.flip-cue{margin-top:auto; font-size:13px; font-weight:400; letter-spacing:.04em; color:var(--accent-deep);}
 .flip-back{transform:rotateY(180deg); background:var(--ink-deep); justify-content:center;}
-.flip-back p{margin:0; font-size:14.5px; line-height:1.6; color:rgba(255,255,255,.9);}
+.flip-back p{margin:0; font-size:15px; line-height:1.6; color:rgba(255,255,255,.9);}
 
 /* ---------- Image bands ---------- */
 .band{position:relative; background-position:center; background-size:cover; background-repeat:no-repeat;}
@@ -151,16 +153,16 @@ h2{font-size:clamp(34px, 4.6vw, 58px); line-height:1.02;}
 .band-title{
   background:#fff;
   padding:clamp(22px, 3vw, 38px) clamp(28px, 5vw, 72px);
-  font-size:clamp(28px, 3.8vw, 50px);
+  font-size:clamp(34px, 4.4vw, 58px);
   text-align:center;
 }
 .band-or{background-image:url('or-band.jpg'); height:clamp(220px, 30vw, 420px);}
 
 /* ---------- Plan ---------- */
-.plan-highlight{margin:0; font-size:clamp(18px, 1.8vw, 22px); line-height:1.45; font-weight:500; color:var(--ink); max-width:44ch;}
+.plan-highlight{margin:0; font-family:var(--head); font-size:clamp(24px, 2.4vw, 30px); line-height:1.3; font-weight:500; color:var(--ink); max-width:44ch;}
 .htimeline{display:grid; grid-template-columns:repeat(3,1fr); column-gap:28px; margin-top:56px;}
 .htl-item{display:flex; flex-direction:column;}
-.htl-date{font-size:13px; font-weight:600; letter-spacing:.04em; color:var(--accent-deep);}
+.htl-date{font-size:13px; font-weight:400; letter-spacing:.1em; color:var(--accent-deep);}
 .htl-node{position:relative; height:24px; margin:10px 0 16px; display:flex; align-items:center;}
 .htl-node::before{content:""; position:absolute; left:0; right:-28px; top:50%; height:2px; background:var(--line);}
 .htl-item:last-child .htl-node::before{right:0;}
@@ -168,22 +170,22 @@ h2{font-size:clamp(34px, 4.6vw, 58px); line-height:1.02;}
 .dot{position:relative; width:14px; height:14px; border-radius:50%; background:#fff; border:2px solid var(--accent);}
 .htl-item.done .dot, .htl-item.now .dot{background:var(--accent);}
 .htl-item.now .dot{box-shadow:0 0 0 6px var(--accent-tint);}
-.htl-body strong{display:block; font-family:var(--head); font-size:21px; font-weight:700; color:var(--ink-deep); letter-spacing:-.01em;}
+.htl-body strong{display:block; font-family:var(--head); font-size:27px; font-weight:600; line-height:1.15; color:var(--ink-deep);}
 .htl-body span{display:block; margin-top:6px; font-size:15px; color:var(--slate); max-width:30ch;}
 .htl-body .badge{
   display:inline-block; margin-top:10px; padding:4px 10px;
   background:var(--accent-tint); color:var(--accent-deep);
-  font-size:12px; font-weight:600;
+  font-size:12px; font-weight:400; letter-spacing:.04em;
 }
 .callout{margin:56px 0 0; padding-top:28px; border-top:1px solid var(--line); color:var(--slate); max-width:70ch;}
-.callout a{color:var(--accent-deep); font-weight:600;}
+.callout a{color:var(--accent-deep); font-weight:500;}
 
 /* ---------- Contact ---------- */
 .contact{background:var(--sky);}
 .contact .sub{margin:16px 0 0; color:var(--slate); max-width:56ch;}
 .contact-cols{display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:44px; align-items:start;}
 .contact-col{background:#fff; padding:32px 30px;}
-.col-title{font-family:var(--head); font-size:22px; font-weight:700; letter-spacing:-.01em; color:var(--ink-deep); margin:0;}
+.col-title{font-family:var(--head); font-size:28px; font-weight:600; color:var(--ink-deep); margin:0;}
 .col-desc{margin:10px 0 0; font-size:15px; color:var(--slate);}
 form.stack{margin-top:20px; display:flex; flex-direction:column; gap:10px;}
 input[type="email"], textarea{
@@ -196,7 +198,7 @@ textarea{min-height:96px; resize:vertical;}
 input::placeholder, textarea::placeholder{color:var(--mute);}
 input:focus-visible, textarea:focus-visible{outline:2px solid var(--accent); outline-offset:0; border-color:var(--accent);}
 form.stack .btn{align-self:flex-start; margin-top:6px;}
-.confirm{display:none; margin-top:14px; font-weight:600; color:var(--accent-deep);}
+.confirm{display:none; margin-top:14px; font-weight:400; color:var(--accent-deep);}
 
 /* ---------- Footer ---------- */
 .site-foot{border-top:1px solid var(--line);}

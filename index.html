@@ -16,7 +16,7 @@
 
 <div class="bg-layer" aria-hidden="true"></div>
 
-<div class="sticky-top">
+<div class="sticky-top over-hero" id="topnav">
   <header class="site">
     <div class="navbar">
       <a class="logo-link" href="#home"><img src="logo.png" alt="Revelascope"></a>
@@ -31,13 +31,36 @@
 
 <main>
 
-  <section class="panel" id="home">
-    <div class="inner narrow">
+  <section class="panel hero-panel" id="home">
+    <div class="hero-media" aria-hidden="true">
+      <!-- To use footage: uncomment, add hero.mp4 + hero.jpg to the repo root.
+      <video class="hero-video" autoplay muted loop playsinline poster="hero.jpg">
+        <source src="hero.mp4" type="video/mp4">
+      </video>
+      -->
+      <svg class="aperture" viewBox="-100 -100 200 200">
+        <circle r="95" />
+        <g class="blades">
+          <line x1="34" y1="-88.7" x2="34" y2="14.1" />
+          <line x1="34" y1="-88.7" x2="34" y2="14.1" transform="rotate(45)" />
+          <line x1="34" y1="-88.7" x2="34" y2="14.1" transform="rotate(90)" />
+          <line x1="34" y1="-88.7" x2="34" y2="14.1" transform="rotate(135)" />
+          <line x1="34" y1="-88.7" x2="34" y2="14.1" transform="rotate(180)" />
+          <line x1="34" y1="-88.7" x2="34" y2="14.1" transform="rotate(225)" />
+          <line x1="34" y1="-88.7" x2="34" y2="14.1" transform="rotate(270)" />
+          <line x1="34" y1="-88.7" x2="34" y2="14.1" transform="rotate(315)" />
+        </g>
+      </svg>
+      <div class="hero-shade"></div>
+    </div>
+
+    <div class="hero-copy">
       <h1 class="hero">Better surgery starts with better visualization.</h1>
       <p class="tagline">Modern surgery without replacing the surgeon.</p>
       <p class="sub">Revelascope is a video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy.</p>
-      <p class="disclaimer">Revelascope is an investigational device under development by Crescata Surgical. Not yet evaluated or cleared by the FDA. Not available for clinical or commercial use.</p>
     </div>
+
+    <p class="disclaimer hero-disclaimer">Revelascope is an investigational device under development by Crescata Surgical. Not yet evaluated or cleared by the FDA. Not available for clinical or commercial use.</p>
   </section>
 
   <section class="panel" id="problem">
@@ -168,6 +191,12 @@
 </main>
 
 <script>
+  // Nav: transparent + white over the hero, frosted once you scroll
+  var topnav = document.getElementById('topnav');
+  function navState(){ topnav.classList.toggle('over-hero', window.scrollY < 40); }
+  navState();
+  window.addEventListener('scroll', navState, {passive:true});
+
   // Flip cards
   document.querySelectorAll('.flip').forEach(function(el){
     function toggle(){

@@ -594,3 +594,83 @@ button.btn:focus-visible{outline:2px solid var(--accent-deep); outline-offset:3p
   .callout{background:var(--accent-tint);}
   input[type="email"], textarea{background:#FFFFFF; color:var(--ink);}
 }
+
+/* =========================================================
+   Bright full-bleed hero (nav overlays it)
+   ========================================================= */
+.sticky-top{position:fixed; left:0; right:0; top:0;}
+header.site{transition:background .3s ease, border-color .3s ease;}
+
+.sticky-top.over-hero header.site{
+  background:transparent;
+  border-bottom-color:transparent;
+  -webkit-backdrop-filter:none; backdrop-filter:none;
+}
+
+#home.hero-panel{
+  min-height:100vh;
+  min-height:100svh;
+  padding:calc(var(--nav-h) + 40px) 24px 96px;
+  justify-content:center;
+  overflow:hidden;
+  isolation:isolate;
+  background:
+    radial-gradient(ellipse 55% 50% at 50% 44%, rgba(255,255,255,.95), rgba(255,255,255,0) 70%),
+    transparent;
+}
+.hero-media{position:absolute; inset:0; z-index:-1;}
+.hero-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+/* Light wash keeps navy text readable over footage */
+.hero-shade{
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(247,251,252,.55) 0%, rgba(247,251,252,.25) 45%, rgba(247,251,252,.85) 100%);
+}
+
+/* The one moment: the iris opens as the page loads */
+.aperture{
+  position:absolute;
+  left:50%; top:46%;
+  width:min(120vh, 118vw);
+  height:auto;
+  transform:translate(-50%,-50%);
+  fill:none;
+  stroke:rgba(14,124,140,.16);
+  stroke-width:.6;
+  animation:iris-open 2.4s cubic-bezier(.2,.7,.1,1) both;
+}
+@keyframes iris-open{
+  from{transform:translate(-50%,-50%) rotate(-40deg) scale(.82); opacity:0;}
+  to  {transform:translate(-50%,-50%) rotate(0deg)  scale(1);   opacity:1;}
+}
+
+.hero-copy{position:relative; max-width:1000px;}
+.hero-panel .hero{
+  color:var(--ink-deep);
+  font-size:clamp(42px, 7.2vw, 96px);
+  line-height:1.0;
+  letter-spacing:-.022em;
+  max-width:15ch;
+  text-wrap:balance;
+}
+.hero-panel .tagline{margin-top:26px; font-size:clamp(15px, 1.7vw, 19px);}
+.hero-panel .sub{font-size:clamp(14px, 1.4vw, 16.5px); max-width:58ch;}
+.hero-disclaimer{
+  position:absolute;
+  left:24px; right:24px; bottom:26px;
+  margin:0 auto;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .aperture{animation:none;}
+  header.site{transition:none;}
+}
+@media (max-width:860px){
+  #home.hero-panel{padding:calc(var(--nav-h) + 24px) 22px 110px;}
+  .aperture{width:170vw;}
+}
+@media (max-width:480px){
+  nav.links{flex-wrap:nowrap; gap:14px;}
+  nav.links a{font-size:13px;}
+  .logo-link img{height:22px;}
+  .navbar{padding:0 18px;}
+}

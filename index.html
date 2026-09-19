@@ -3,27 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Revelascope — video-enabled surgical retraction</title>
-<meta name="description" content="Revelascope is a video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy.">
+<title>Revelascope</title>
+<meta name="description" content="Better surgery starts with better visualization. Revelascope is a video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy.">
 <meta name="color-scheme" content="light">
 <link rel="icon" href="logo.png">
-<meta property="og:title" content="Revelascope — video-enabled surgical retraction">
-<meta property="og:description" content="A video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy.">
-<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="sticky-top" id="topnav">
+<div class="bg-layer" aria-hidden="true"></div>
+
+<div class="sticky-top">
   <header class="site">
     <div class="navbar">
       <a class="logo-link" href="#home"><img src="logo.png" alt="Revelascope"></a>
       <nav class="links">
         <a href="#home" aria-current="page">Home</a>
-        <a href="#problem">Problem</a>
         <a href="#plan">Development</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -33,180 +31,112 @@
 
 <main>
 
-  <section class="panel hero" id="home">
-    <svg class="wave wave-hero" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="gA" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stop-color="#A9CBE2" stop-opacity=".28"/>
-          <stop offset="55%" stop-color="#7DAFD1" stop-opacity=".5"/>
-          <stop offset="100%" stop-color="#3C7D9C" stop-opacity=".62"/>
-        </linearGradient>
-        <linearGradient id="gB" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stop-color="#D9E9F4" stop-opacity=".5"/>
-          <stop offset="100%" stop-color="#96C0DA" stop-opacity=".45"/>
-        </linearGradient>
-        <linearGradient id="gB2" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#EAF3F9" stop-opacity=".9"/>
-          <stop offset="100%" stop-color="#BBD8EA" stop-opacity=".55"/>
-        </linearGradient>
-      </defs>
-      <g class="drift d1"><path d="M-60 600 C 180 500, 320 720, 560 660 C 800 600, 960 380, 1220 420 C 1340 438, 1420 480, 1500 460 L1500 1000 L-60 1000 Z" fill="url(#gB2)"/></g>
-      <g class="drift d2"><path d="M-60 720 C 200 640, 340 840, 600 770 C 860 700, 1000 500, 1260 540 C 1370 557, 1430 590, 1500 570 L1500 1000 L-60 1000 Z" fill="url(#gB)"/></g>
-      <g class="drift d3"><path d="M-60 840 C 220 770, 380 940, 640 880 C 900 820, 1060 640, 1300 676 C 1400 691, 1440 712, 1500 700 L1500 1000 L-60 1000 Z" fill="url(#gA)"/></g>
-      <g class="drift d4" fill="none" stroke="#5E93B4" stroke-opacity=".3">
-        <path d="M-60 560 C 180 460, 320 682, 560 622 C 800 562, 960 340, 1220 380 C 1340 398, 1420 440, 1500 420"/>
-        <path d="M-60 588 C 180 488, 320 710, 560 650 C 800 590, 960 368, 1220 408 C 1340 426, 1420 468, 1500 448"/>
-        <path d="M-60 616 C 180 516, 320 738, 560 678 C 800 618, 960 396, 1220 436 C 1340 454, 1420 496, 1500 476"/>
-        <path d="M-60 644 C 180 544, 320 766, 560 706 C 800 646, 960 424, 1220 464 C 1340 482, 1420 524, 1500 504"/>
-        <path d="M-60 672 C 180 572, 320 794, 560 734 C 800 674, 960 452, 1220 492 C 1340 510, 1420 552, 1500 532"/>
-      </g>
-    </svg>    <div class="hero-text">
-      <h1 class="reveal">Better surgery starts with <em>better visualization.</em></h1>
-      <p class="sub reveal">Revelascope is a video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy.</p>
-      <p class="reveal"><a class="btn" href="#contact">Get in touch</a></p>
+  <section class="panel" id="home">
+    <div class="inner narrow">
+      <h1 class="hero">Better surgery starts with better visualization.</h1>
+      <p class="sub">Revelascope is a video-enabled surgical retractor integrating a camera and illumination directly into the retractor blade, developed for nipple-sparing mastectomy.</p>
+      <p class="disclaimer">Revelascope is an investigational device under development by Crescata Surgical. Not yet evaluated or cleared by the FDA. Not available for clinical or commercial use.</p>
     </div>
-    <p class="disclaimer hero-disclaimer">Revelascope is an investigational device under development by Crescata Surgical. Not yet evaluated or cleared by the FDA. Not available for clinical or commercial use.</p>
   </section>
 
-  <section class="panel problem" id="problem">
-    <div class="grid">
-      <div class="col-head">
-        <p class="eyebrow reveal">The problem</p>
-        <h2 class="reveal">Operating<br>in the dark.</h2>
-      </div>
+  <section class="panel" id="problem">
+    <div class="inner">
+      <p class="lead-in">The Problem</p>
 
-      <figure class="quote reveal">
+      <figure class="quote">
         <blockquote>A surgeon is only as good as their retraction and their exposure.</blockquote>
         <cite>University of Chicago Surgeon</cite>
       </figure>
+
+      <div class="flip-cards">
+        <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Patient retraction trauma — flip for detail">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <span class="flip-title">Patient retraction trauma</span>
+              <span class="flip-teaser">5&ndash;14% skin-flap necrosis</span>
+              <span class="flip-cue">Tap to flip &#8635;</span>
+            </div>
+            <div class="flip-face flip-back">
+              <p>In order for the surgeon to achieve direct line-of-sight visualization, an assistant holds sustained tension on the skin flap. This forceful retraction is a recognized driver of skin flap and NAC necrosis, leading to post-operative complications.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Surgeon injury — flip for detail">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <span class="flip-title">Surgeon injury</span>
+              <span class="flip-teaser">&gt;50% report career-affecting pain</span>
+              <span class="flip-cue">Tap to flip &#8635;</span>
+            </div>
+            <div class="flip-face flip-back">
+              <p>Dissecting with direct line-of-sight visualization forces non-anatomic and painful operating posture. Over the course of a surgical career, the cumulative physical strain causes chronic injury and early attrition.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Surgical education — flip for detail">
+          <div class="flip-inner">
+            <div class="flip-face flip-front">
+              <span class="flip-title">Surgical education</span>
+              <span class="flip-teaser">Only one person can see the operative field</span>
+              <span class="flip-cue">Tap to flip &#8635;</span>
+            </div>
+            <div class="flip-face flip-back">
+              <p>The dissection happens through a small incision in a deep, dark cavity, so only the operating surgeon has a line of sight. Residents and fellows can&#39;t see what the attending sees, which makes the procedure difficult to teach and slow to learn.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="footnote">Sources: Matsen et&nbsp;al., <em>Ann Surg Oncol</em> 2016; Epstein et&nbsp;al., <em>JAMA Surg</em> 2018; Davis et&nbsp;al., <em>J Surg Res</em> 2014; Hallbeck et&nbsp;al., <em>Ann Surg Oncol</em> 2020.</p>
     </div>
-
-    <div class="flip-cards">
-      <div class="flip reveal" role="button" tabindex="0" aria-pressed="false" aria-label="Patient retraction trauma — flip for detail">
-        <div class="flip-inner">
-          <div class="flip-face flip-front">
-            <span class="flip-num">5&ndash;14%</span>
-            <span class="flip-title">Patient retraction trauma</span>
-            <span class="flip-teaser">Skin-flap necrosis after nipple-sparing mastectomy</span>
-            <span class="flip-cue">Tap to flip &#8635;</span>
-          </div>
-          <div class="flip-face flip-back">
-            <p>In order for the surgeon to achieve direct line-of-sight visualization, an assistant holds sustained tension on the skin flap. This forceful retraction is a recognized driver of skin flap and NAC necrosis, leading to post-operative complications.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="flip reveal" role="button" tabindex="0" aria-pressed="false" aria-label="Surgeon injury — flip for detail">
-        <div class="flip-inner">
-          <div class="flip-face flip-front">
-            <span class="flip-num">&gt;50%</span>
-            <span class="flip-title">Surgeon injury</span>
-            <span class="flip-teaser">Of surgeons report career-affecting pain</span>
-            <span class="flip-cue">Tap to flip &#8635;</span>
-          </div>
-          <div class="flip-face flip-back">
-            <p>Dissecting with direct line-of-sight visualization forces non-anatomic and painful operating posture. Over the course of a surgical career, the cumulative physical strain causes chronic injury and early attrition.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="flip reveal" role="button" tabindex="0" aria-pressed="false" aria-label="Surgical education — flip for detail">
-        <div class="flip-inner">
-          <div class="flip-face flip-front">
-            <span class="flip-num">1</span>
-            <span class="flip-title">Surgical education</span>
-            <span class="flip-teaser">Only one person can see the operative field</span>
-            <span class="flip-cue">Tap to flip &#8635;</span>
-          </div>
-          <div class="flip-face flip-back">
-            <p>The dissection happens through a small incision in a deep, dark cavity, so only the operating surgeon has a line of sight. Residents and fellows can&#39;t see what the attending sees, which makes the procedure difficult to teach and slow to learn.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <p class="footnote">Sources: Matsen et&nbsp;al., <em>Ann Surg Oncol</em> 2016; Epstein et&nbsp;al., <em>JAMA Surg</em> 2018; Davis et&nbsp;al., <em>J Surg Res</em> 2014; Hallbeck et&nbsp;al., <em>Ann Surg Oncol</em> 2020.</p>
   </section>
 
-  <section class="panel plan" id="plan">
-    <svg class="wave wave-band" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <linearGradient id="gC" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stop-color="#EDF5FA"/>
-          <stop offset="55%" stop-color="#C6DDEC"/>
-          <stop offset="100%" stop-color="#8CB8D6"/>
-        </linearGradient>
-      </defs>
-      <g class="drift d2"><path d="M0 150 C 180 40, 360 250, 560 170 C 760 90, 900 250, 1080 190 C 1240 136, 1340 60, 1440 90 L1440 320 L0 320 Z" fill="url(#gC)" opacity=".7"/></g>
-      <g class="drift d4" fill="none" stroke="#6E9FC0" stroke-opacity=".32">
-        <path d="M0 110 C 180 0, 360 210, 560 130 C 760 50, 900 210, 1080 150 C 1240 96, 1340 20, 1440 50"/>
-        <path d="M0 134 C 180 24, 360 234, 560 154 C 760 74, 900 234, 1080 174 C 1240 120, 1340 44, 1440 74"/>
-        <path d="M0 158 C 180 48, 360 258, 560 178 C 760 98, 900 258, 1080 198 C 1240 144, 1340 68, 1440 98"/>
-        <path d="M0 182 C 180 72, 360 282, 560 202 C 760 122, 900 282, 1080 222 C 1240 168, 1340 92, 1440 122"/>
-      </g>
-    </svg>
-    <div class="grid plan-grid">
-      <div class="col-head">
-        <p class="eyebrow reveal">Development</p>
-        <h2 class="reveal">From prototype to the&nbsp;OR.</h2>
-      </div>
-      <p class="plan-highlight reveal">Each prototype is validated with practicing breast surgeons before the next stage begins.</p>
-    </div>
 
-    <div class="htimeline">
-      <div class="htl-item done reveal">
-        <span class="htl-date">Nov 2025</span>
-        <div class="htl-node"><span class="dot"></span></div>
-        <div class="htl-body">
-          <strong>Alpha prototype</strong>
-          <span>Bilateral cadaveric NSM completed with Revelascope as the sole retractor.</span>
-        </div>
-      </div>
-      <div class="htl-item done reveal">
-        <span class="htl-date">Aug 2026</span>
-        <div class="htl-node"><span class="dot"></span></div>
-        <div class="htl-body">
-          <strong>Alpha-plus prototype</strong>
-          <span class="badge">Completed</span>
-        </div>
-      </div>
-      <div class="htl-item reveal">
-        <span class="htl-date">Jan 2027</span>
-        <div class="htl-node"><span class="dot"></span></div>
-        <div class="htl-body">
-          <strong>Beta prototype</strong>
-          <span>Validated with practicing breast surgeons before the OR.</span>
-        </div>
-      </div>
-    </div>
+  <section class="panel" id="plan">
+    <div class="inner">
+      <h1 class="wide">From Prototype to the OR</h1>
+      <p class="plan-highlight">Each prototype development is validated with practicing breast surgeons before the next stage begins.</p>
 
-    <p class="callout reveal">Interested in where Revelascope goes next? <a href="#contact">Reach out</a> to learn more about upcoming development milestones, or subscribe to our quarterly newsletter.</p>
+      <div class="htimeline">
+        <div class="htl-item done">
+          <span class="htl-date">Nov 2025</span>
+          <div class="htl-node"><span class="dot"></span></div>
+          <div class="htl-body">
+            <strong>Alpha prototype</strong>
+            <span>Bilateral cadaveric NSM completed with Revelascope as the sole retractor.</span>
+          </div>
+        </div>
+        <div class="htl-item done">
+          <span class="htl-date">Aug 2026</span>
+          <div class="htl-node"><span class="dot"></span></div>
+          <div class="htl-body">
+            <strong>Alpha-plus prototype</strong>
+            <span class="badge">Completed</span>
+          </div>
+        </div>
+        <div class="htl-item">
+          <span class="htl-date">Jan 2027</span>
+          <div class="htl-node"><span class="dot"></span></div>
+          <div class="htl-body">
+            <strong>Beta prototype</strong>
+            <span>Validated with practicing breast surgeons before the OR.</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="callout">Interested in where Revelascope goes next? <a href="#contact">Reach out</a> to learn more about upcoming development milestones, or subscribe to our quarterly newsletter.</p>
+    </div>
   </section>
 
-  <section class="panel contact" id="contact">
-    <svg class="wave wave-contact" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="gD" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stop-color="#2E6F8E" stop-opacity=".12"/>
-          <stop offset="100%" stop-color="#5A9DBE" stop-opacity=".4"/>
-        </linearGradient>
-      </defs>
-      <g class="drift d3"><path d="M-60 500 C 180 420, 340 610, 600 540 C 860 470, 1020 300, 1280 344 C 1380 360, 1440 388, 1500 372 L1500 800 L-60 800 Z" fill="url(#gD)"/></g>
-      <g class="drift d1" fill="none" stroke="#8CC2DC" stroke-opacity=".18">
-        <path d="M-60 450 C 180 370, 340 560, 600 490 C 860 420, 1020 250, 1280 294 C 1380 310, 1440 338, 1500 322"/>
-        <path d="M-60 480 C 180 400, 340 590, 600 520 C 860 450, 1020 280, 1280 324 C 1380 340, 1440 368, 1500 352"/>
-        <path d="M-60 510 C 180 430, 340 620, 600 550 C 860 480, 1020 310, 1280 354 C 1380 370, 1440 398, 1500 382"/>
-        <path d="M-60 540 C 180 460, 340 650, 600 580 C 860 510, 1020 340, 1280 384 C 1380 400, 1440 428, 1500 412"/>
-      </g>
-    </svg>    <div class="grid contact-grid">
-      <div class="col-head">
-        <p class="eyebrow reveal">Contact</p>
-        <h2 class="reveal">Get in touch.</h2>
-        <p class="sub reveal">Send us a specific inquiry, or subscribe to follow Revelascope&#39;s development. Choose whichever fits.</p>
-      </div>
+  <section class="panel" id="contact">
+    <div class="inner">
+      <h1>Get in touch</h1>
+      <p class="sub">Send us a specific inquiry, or subscribe to follow Revelascope&#39;s development. Choose whichever fits.</p>
 
       <div class="contact-cols">
-        <div class="contact-col reveal">
+        <div class="contact-col">
           <h3 class="col-title">Send an inquiry</h3>
           <p class="col-desc">Product inquiries, partnership, investment, donation, clinical collaboration, press, and&#47;or careers. Leave a message and we&#39;ll get back to you.</p>
           <form id="interest-form" class="stack" name="revelascope-interest" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -219,7 +149,7 @@
           <p class="confirm" id="interest-confirm">Thanks &mdash; we&#39;ll be in touch.</p>
         </div>
 
-        <div class="contact-col reveal">
+        <div class="contact-col">
           <h3 class="col-title">Subscribe to the newsletter</h3>
           <p class="col-desc">Quarterly updates on prototype milestones, clinical validation, and company news. Just your email &mdash; no message needed.</p>
           <form id="news-form" class="stack" name="revelascope-newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -235,13 +165,6 @@
   </section>
 
 </main>
-
-<footer class="site-foot">
-  <div class="foot-inner">
-    <span>Crescata Surgical, Inc. &middot; Chicago, IL</span>
-    <span>&copy; 2026</span>
-  </div>
-</footer>
 
 <script>
   // Flip cards
@@ -270,35 +193,11 @@
   wire('interest-form','interest-confirm');
   wire('news-form','news-confirm');
 
-  // Nav: light type over the dark hero, solid bar after
-  var topnav = document.getElementById('topnav');
-  function navState(){ topnav.classList.toggle('over-hero', window.scrollY < 40); }
-  navState();
-  window.addEventListener('scroll', navState, {passive:true});
-
-  // Staggered reveals on scroll
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var items = document.querySelectorAll('.reveal');
-  if(reduce){
-    items.forEach(function(el){ el.classList.add('shown'); });
-  } else {
-    var ro = new IntersectionObserver(function(entries){
-      var n = 0;
-      entries.forEach(function(en){
-        if(en.isIntersecting){
-          en.target.style.transitionDelay = (n++ * 90) + 'ms';
-          en.target.classList.add('shown');
-          ro.unobserve(en.target);
-        }
-      });
-    }, {rootMargin:'0px 0px -12% 0px', threshold:.15});
-    items.forEach(function(el){ ro.observe(el); });
-  }
-
-  // Scroll-spy
+  // Scroll-spy: highlight the tab for the section currently in view
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.links a'));
   var map = {};
   navLinks.forEach(function(a){ var id = a.getAttribute('href').slice(1); if(id) map[id] = a; });
+  map['problem'] = map['home']; // folded problem keeps Home active
   var obs = new IntersectionObserver(function(entries){
     entries.forEach(function(en){
       if(en.isIntersecting){

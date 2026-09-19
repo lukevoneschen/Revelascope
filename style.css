@@ -35,6 +35,7 @@ body{
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto;}
   .reveal{opacity:1; transform:none; transition:none;}
+  .drift{animation:none;}
   .flip-inner{transition:none;}
 }
 
@@ -108,11 +109,28 @@ a:focus-visible, button:focus-visible, .flip:focus-visible{outline:2px solid var
   display:grid;
   grid-template-columns:repeat(12, 1fr);
   align-items:center;
-  padding:calc(var(--nav-h) + 48px) var(--pad) 104px;
+  padding:calc(var(--nav-h) + 40px) var(--pad) 72px;
   overflow:hidden;
 }
-/* Flowing artwork */
-.wave{position:absolute; pointer-events:none;}
+/* Flowing artwork — slow, living motion */
+.wave{position:absolute; pointer-events:none; overflow:visible;}
+.drift{will-change:transform; transform-box:view-box; transform-origin:center;}
+.d1{animation:drift-a 26s ease-in-out infinite alternate;}
+.d2{animation:drift-b 32s ease-in-out infinite alternate;}
+.d3{animation:drift-a 38s ease-in-out infinite alternate reverse;}
+.d4{animation:drift-c 44s ease-in-out infinite alternate;}
+@keyframes drift-a{
+  from{transform:translate3d(-2.2%, 1.2%, 0) scale(1.02);}
+  to  {transform:translate3d(2.4%, -1.4%, 0) scale(1.05);}
+}
+@keyframes drift-b{
+  from{transform:translate3d(2%, -1%, 0) scale(1.04);}
+  to  {transform:translate3d(-2.6%, 1.6%, 0) scale(1.01);}
+}
+@keyframes drift-c{
+  from{transform:translate3d(-3%, .6%, 0);}
+  to  {transform:translate3d(3%, -1.2%, 0);}
+}
 .wave-hero{left:0; right:0; bottom:0; width:100%; height:78%;}
 
 .hero-text{grid-column:1 / 9; grid-row:1; position:relative; z-index:2;}
@@ -121,13 +139,7 @@ a:focus-visible, button:focus-visible, .flip:focus-visible{outline:2px solid var
 .hero .eyebrow{color:var(--signal-ink);}
 .hero .sub{margin:34px 0 46px; color:var(--slate); max-width:42ch; font-size:clamp(16px,1.35vw,18px);}
 .hero .btn{margin:0;}
-.hero-disclaimer{
-  position:absolute; left:var(--pad); bottom:34px;
-  grid-column:1 / 7;
-  margin:0;
-  color:var(--mute);
-  z-index:2;
-}
+.hero-disclaimer{position:relative; z-index:2; grid-column:1 / 8; margin:56px 0 0;}
 
 /* ---------- Shared asymmetric grid ---------- */
 .panel{padding:clamp(80px, 11vw, 150px) var(--pad); scroll-margin-top:var(--nav-h);}
@@ -296,7 +308,7 @@ form.stack .btn{align-self:flex-start; margin-top:8px;}
 @media (max-width:860px){
   .hero{display:block; min-height:0; padding-bottom:88px;}
   .wave-hero{top:auto; bottom:0; width:100%; height:52%; opacity:.7;}
-  .hero-disclaimer{position:static; margin-top:44px;}
+  .hero-disclaimer{margin-top:44px;}
   .flip-cards, .htimeline, .contact-cols{grid-template-columns:1fr;}
   .flip{height:250px;}
   .flip:nth-child(2), .flip:nth-child(3), .htl-item:nth-child(2){margin-top:0; padding-top:0;}
